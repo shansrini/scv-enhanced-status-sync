@@ -13,7 +13,7 @@ This Genesys Cloud Developer Blueprint demonstrates how to configure Genesys Clo
 
 This blueprint provides an example Salesforce Apex class that demonstrates how to handle the status change events and how to respond. The events are triggered by both Salesforce status changes and Genesys Cloud status changes. This blueprint can become fully functional when you replace the ids in the class with the ids from your Genesys Cloud and Salesforce orgs.
 
-{diagram}
+![Workflow for enhanced status syncing with the Genesys Cloud for Salesforce Service Cloud Voice package](/blueprint/images/enhanced_status_syncing.png "Workflow for enhanced status syncing with the Genesys Cloud for Salesforce Service Cloud Voice package")
 
 ## Scenario
 
