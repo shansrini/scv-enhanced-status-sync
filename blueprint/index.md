@@ -21,7 +21,7 @@ Customers who utilize Workforce Engagement Management will require a deeper stat
 
 ## Solution
 
-This blueprint explains how to extend the GenesysSCVExtension.Status class of the Genesys Cloud for Salesforce Service Cloud Voice package. It shows you how to setup your Apex class to listen to the Lightning Message Channel status change events from both Genesys Cloud and Salesforce. It shows you the format of the incoming and outgoing data and demonstrates how you can customize your status mapping.
+This blueprint explains how to extend the GenesysSCVExtension.Status class of the Genesys Cloud for Salesforce Service Cloud Voice package. It shows you how to setup your Apex class to receive status change events from both Genesys Cloud and Salesforce. It shows you the format of the incoming and outgoing data and demonstrates how you can customize your status mapping.
 
 ## Solution components
 
