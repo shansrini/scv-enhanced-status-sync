@@ -21,7 +21,7 @@ Customers who utilize Workforce Engagement Management will require a deeper stat
 
 ## Solution
 
-This blueprint explains how to extend the GenesysSCVExtension.Status class of the Genesys Cloud for Salesforce Service Cloud Voice package. It shows you how to setup your Apex class to receive status change events from both Genesys Cloud and Salesforce. It shows you the format of the incoming and outgoing data and demonstrates how you can customize your status mapping.
+This blueprint explains how to extend the GenesysSCVExtension.Status class of the Genesys Cloud for Salesforce Service Cloud Voice package. It shows you how to set up your Apex class to receive status change events from both Genesys Cloud and Salesforce. It shows you the format of the incoming and outgoing data and demonstrates how you can customize your status mapping.
 
 ## Solution components
 
@@ -63,26 +63,26 @@ TODO: Need permanent link address
 
 ### Create a new Apex class in Salesforce
 
-1. Create the **`StatusSyncManager`** class in Salesforce
-  1. In the Developer Console, click **File** > **New** > **Apex Class**.
-  2. For the class name, enter **StatusSyncManager** and then click **OK**.
-  3. Replace the default code with the code found at `src/classes/StatusSyncManager.cls`.
-  4. Save the file. 
+1. Create the **`StatusSyncManager`** class in Salesforce.
+2. In the Developer Console, click **File** > **New** > **Apex Class**.
+3. For the class name, enter **StatusSyncManager** and then click **OK**.
+4. Replace the default code with the code found at `src/classes/StatusSyncManager.cls`.
+5. Save the file to Salesforce. 
 
 ### Update Genesys Cloud status ids
 
 1. Get the status ids from your Genesys Cloud org by calling `https://api.{region}.com/api/v2/systempresences`. For more information, see [API Explorer](https://developer.genesys.cloud/devapps/api-explorer "Opens the API Explorer") in the Genesys Cloud Developer Center.
 2. In the **StatusSyncManager** class, update the `CHANGE ME` text anywhere a new **GenesysTargetStatus** class is being created with a valid id from the results in the previous step. 
-3. Save the file.
+3. Save the file to Salesforce.
 
 ### Update Salesforce status ids
 
-1. Get the status ids from your Salesforce org by running a query
-  1. In the Developer Console, click the **Query Editor** tab in the middle of the console.
-  2. Enter `SELECT DeveloperName, Id, MasterLabel FROM ServicePresenceStatus WHERE IsDeleted = false`.
-  3. Click the **Execute** button.
-  4. In the **StatusSyncManager** class, update the `CHANGE ME` text anywhere a new **SalesforceTargetStatus** class is being created with a valid id from the results in the previous step.
-  5. Save the file.
+1. Get the status ids from your Salesforce org by running a query.
+    1. In the Developer Console, click the **Query Editor** tab in the middle of the console.
+    2. Enter `SELECT DeveloperName, Id, MasterLabel FROM ServicePresenceStatus WHERE IsDeleted = false`.
+    3. Click the **Execute** button.
+2. In the **StatusSyncManager** class, update the `CHANGE ME` text anywhere a new **SalesforceTargetStatus** class is being created with a valid id from the results in the previous step.
+3. Save the file to Salesforce.
 
 ### Configure the Genesys Cloud for Salesforce Service Cloud Voice package
 
@@ -90,7 +90,7 @@ TODO: Need permanent link address
 2. Select the desired contact center.
 3. Under Enhanced Status Syncing, select the Extension Class of **StatusSyncManager**.
 4. Save the settings.
-5. Refresh the page for the new settings to take affect.
+5. Refresh the page for the new settings to take effect.
 
 ### Test your solution
 
@@ -106,6 +106,6 @@ TODO: Need permanent link address
 
 TODO: Need permanent link address
 * [About Genesys Cloud for Salesforce Service Cloud Voice](https://help.mypurecloud.com/?p=65221 "Opens the About Genesys Cloud for Salesforce Service Cloud Voice article") in the Genesys Cloud Resource Center
-* [Getting Started with Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_intro_get_started.htm "Opens the Getting Started with Apex page") in the Salesforce documentation.
-* [Create Presence Statuses](https://help.salesforce.com/s/articleView?id=sf.service_presence_create_presence_status.htm&type=5 "Opens the Create Presence Statuses page") in the Salesforce documentation.
+* [Getting Started with Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_intro_get_started.htm "Opens the Getting Started with Apex page") in the Salesforce documentation
+* [Create Presence Statuses](https://help.salesforce.com/s/articleView?id=sf.service_presence_create_presence_status.htm&type=5 "Opens the Create Presence Statuses page") in the Salesforce documentation
 * The [enhanced-status-syncing-with-salesforce-service-cloud-voice](https://github.com/GenesysCloudBlueprints/enhanced-status-syncing-with-salesforce-service-cloud-voice "Opens the enhanced-status-syncing-with-salesforce-service-cloud-voice repository in GitHub") repository in GitHub
