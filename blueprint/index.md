@@ -34,7 +34,7 @@ This blueprint explains how to extend the GenesysSCVExtension.Status class of th
 			"statusName": "Online"
 		},
 		"targetStatus": {
-      "statusApiName": "AvailableforVoice",
+			"statusApiName": "AvailableforVoice",
 			"statusId": "0N57z00000008dV",
 			"statusName": "Available for Voice"
 		}
