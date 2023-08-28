@@ -23,6 +23,54 @@ Customers who utilize Workforce Engagement Management will require a deeper stat
 
 This blueprint explains how to extend the GenesysSCVExtension.Status class of the Genesys Cloud for Salesforce Service Cloud Voice package. It shows you how to set up your Apex class to receive status change events from both Genesys Cloud and Salesforce. It shows you the format of the incoming and outgoing data and demonstrates how you can customize your status mapping.
 
+### Input
+
+```
+{
+	"salesforceStatus": {
+		"currentStatus": {
+			"statusApiName": "Online",
+			"statusId": "0N57z00000008bu",
+			"statusName": "Online",
+			"vendorStatusId": null
+		},
+		"targetStatus": {
+			"statusId": "0N57z00000008dV",
+			"statusApiName": "AvailableforVoice",
+			"statusName": "Available for Voice",
+			"vendorStatusId": null
+		}
+	},
+	"genesysCloudStatus": {
+		"currentStatus": {
+			"id": "6a3af858-942f-489d-9700-5f9bcdcdae9b",
+			"systemPresence": "Available"
+		},
+		"targetStatus": {
+			"id": "6a3af858-942f-489d-9700-5f9bcdcdae9b",
+			"systemPresence": "Available"
+		}
+	}
+}
+```
+
+### Output
+
+```
+{
+	"salesforceStatus": {
+		"targetStatus": {
+			"statusId": "0N57z00000008dV"
+		}
+	},
+	"genesysCloudStatus": {
+		"targetStatus": {
+			"id": "e08eaf1b-ee47-4fa9-a231-1200e284798f"
+		}
+	}
+}
+```
+
 ## Solution components
 
 * **Genesys Cloud** - A suite of Genesys cloud services for enterprise-grade communications, collaboration, and contact center management. You create and manage statuses in Genesys Cloud.
