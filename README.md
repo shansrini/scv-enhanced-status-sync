@@ -1,5 +1,5 @@
 # Update the presence of a Genesys Cloud user based on a Salesforce presence change and vice versa
 
-This Genesys Cloud Developer Blueprint demonstrates how to configure Genesys Cloud for Salesforce Service Cloud Voice to use enhanced status syncing. Out of the box, the package provides high level status management. This blueprint will show a way to provide more detailed status mapping between Genesys Cloud and Salesforce Omni-Channel.
+This Genesys Cloud Developer Blueprint demonstrates how to configure CX Cloud from Genesys and Salesforce to use enhanced status sync. This blueprint shows the comprehensive status mapping between Genesys Cloud and Salesforce Omni-Channel.
 
-![Workflow for enhanced status syncing with the Genesys Cloud for Salesforce Service Cloud Voice package](/blueprint/images/enhanced_status_syncing.png "Workflow for enhanced status syncing with the Genesys Cloud for Salesforce Service Cloud Voice package")
+![Workflow for enhanced status sync with the CX Cloud from Genesys and Salesforce package](/blueprint/images/status-sync-salesforce.png "Workflow for enhanced status sync with the CX Cloud from Genesys and Salesforce package")
